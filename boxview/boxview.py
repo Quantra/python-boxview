@@ -266,7 +266,7 @@ class BoxView(object):
             data['expires_at'] = format_date(expires_at)
         if is_downloadable:
             data['is_downloadable'] = bool(is_downloadable)
-        if is_text_selectable:
+        if not is_text_selectable:
             data['is_text_selectable'] = bool(is_text_selectable)
         headers = {'Content-Type': 'application/json'}
 
